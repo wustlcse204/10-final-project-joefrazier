@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { auth } from "./firebase"
+import SignIn from './components/SignIn';
+import SignOut from './components/SignOut';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoggedIn: false
+    }
+  }
+
+  render() {
+    if (!this.state.isLoggedIn) {
+      return (
+        <div className="App">
+          <SignIn />
+        </div>
+      );
+    }
+    else {
+      return (
+        <div className="App">
+          <div> User Logged in</div>
+          <SignOut />
+        </div>
+      );
+
+    }
+
+  }
+  componentDidMount() {
+    auth.onAuthStateChanged(userAuth => {
+      alert(JSON.stringify(userAuth));
+      if (auth.currentUser != null) {
+        this.setState({ isLoggedIn: true });
+      }
+      else {
+        this.setState({ isLoggedIn: false });
+      }
+
+    })
+  }
+
 }
-
 export default App;
