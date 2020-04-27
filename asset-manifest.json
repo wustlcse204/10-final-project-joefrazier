@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/10-final-project-frazierjoe/static/css/main.d1b05096.chunk.css",
+    "main.js": "/10-final-project-frazierjoe/static/js/main.a46854b0.chunk.js",
+    "main.js.map": "/10-final-project-frazierjoe/static/js/main.a46854b0.chunk.js.map",
+    "runtime-main.js": "/10-final-project-frazierjoe/static/js/runtime-main.943f503b.js",
+    "runtime-main.js.map": "/10-final-project-frazierjoe/static/js/runtime-main.943f503b.js.map",
+    "static/js/2.cafe55cf.chunk.js": "/10-final-project-frazierjoe/static/js/2.cafe55cf.chunk.js",
+    "static/js/2.cafe55cf.chunk.js.map": "/10-final-project-frazierjoe/static/js/2.cafe55cf.chunk.js.map",
+    "index.html": "/10-final-project-frazierjoe/index.html",
+    "precache-manifest.260b963239d75d100dbc6baec5a6bf31.js": "/10-final-project-frazierjoe/precache-manifest.260b963239d75d100dbc6baec5a6bf31.js",
+    "service-worker.js": "/10-final-project-frazierjoe/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/10-final-project-frazierjoe/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.cafe55cf.chunk.js.LICENSE.txt": "/10-final-project-frazierjoe/static/js/2.cafe55cf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.943f503b.js",
+    "static/js/2.cafe55cf.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.a46854b0.chunk.js"
+  ]
+}
