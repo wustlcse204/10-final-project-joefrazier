@@ -23,6 +23,7 @@ export function onClickHandlerLogin() {
   var provider = new firebase.auth.GithubAuthProvider();
 
   provider.addScope('repo');
+  provider.addScope('read:user');
 
   firebase.auth().signInWithPopup(provider).then(function (result) {
     var token = result.credential.accessToken;

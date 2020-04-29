@@ -1,0 +1,25 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--med);
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:30px;
+    padding-bottom:30px;
+    border-radius: 20px;
+    color: var(--light);
+    border: 5px solid var(--blue);
+    font-size:20px;
+    margin-top:50px;
+}
+
+.log-btn{
+    background-color: var(--green);
+    border: none;
+    border-radius:5px;
+    padding:10px; 
+    font-size:18px;
+    color: var(--light); 
+}
