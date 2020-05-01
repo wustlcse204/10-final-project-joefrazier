@@ -19,15 +19,16 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 
-export function onClickHandlerLogin() {
+export async function onClickHandlerLogin () {
   var provider = new firebase.auth.GithubAuthProvider();
 
   provider.addScope('repo');
-  provider.addScope('read:user');
+  provider.addScope('user');
+  var token;
 
-  firebase.auth().signInWithPopup(provider).then(function (result) {
-    var token = result.credential.accessToken;
-    console.log(token);
+  await firebase.auth().signInWithPopup(provider).then(function (result) {
+    token = result.credential.accessToken;
+    // console.log(token);
     var user = result.user;
   }).catch(function (error) {
     var errorCode = error.code;
@@ -45,10 +46,13 @@ export function onClickHandlerLogin() {
       console.error(error);
     }
   });
+  return token;
+
 
 }
 
 export function onClickHandlerLogout() {
+ 
   firebase.auth().signOut().then(function() {
     // Sign-out successful.
   }).catch(function(error) {
