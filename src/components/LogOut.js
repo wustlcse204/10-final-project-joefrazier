@@ -1,4 +1,4 @@
-import React, {useState, Component} from 'react'
+import React, {Component} from 'react'
 import './Log.css'
 
 class LogOut extends Component {

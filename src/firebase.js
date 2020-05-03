@@ -22,8 +22,8 @@ export const firestore = firebase.firestore();
 export async function onClickHandlerLogin () {
   var provider = new firebase.auth.GithubAuthProvider();
 
-  provider.addScope('repo');
-  provider.addScope('user');
+  // provider.addScope('repo:read');
+  provider.addScope('user:read');
   var token;
 
   await firebase.auth().signInWithPopup(provider).then(function (result) {
