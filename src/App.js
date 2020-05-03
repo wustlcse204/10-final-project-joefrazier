@@ -8,13 +8,7 @@ import RepoItem from './components/RepoItem'
 import {onClickHandlerLogin, onClickHandlerLogout} from './firebase.js'
 import { firestore } from './firebase';
 import Post from './components/Post';
-// LOGIN
-// cse204testuser
-// csetuers240bas
 
-// mywustlcsetestuser@gmail.com
-// csetuers240bas
-// blah2103
 
 class App extends Component {
   constructor(props) {
